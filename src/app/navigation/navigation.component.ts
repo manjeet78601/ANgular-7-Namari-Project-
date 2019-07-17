@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
 import {Location} from '@angular/common';
+import * as $ from 'jquery';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -12,15 +13,40 @@ export class NavigationComponent implements OnInit {
   constructor(private location: Location,  private auth: AuthenticationService ) { }
 
   ngOnInit() {
-    this.activetab = this.location.path();
-    console.log(`from ${this.activetab}`);
-  }
-  getActiveTab(tabname: string) {
-  this.activetab = tabname;
-  console.log(tabname);
-  }
-  /*logout() {
-   this.auth.logout();
-  }*/
+    // this.activetab = this.location.path();
+    // console.log(`from ${this.activetab}`);
+
+    (<any>$)(document).ready(function () {
+
+      /*Responsive Navigation*/
+(<any>$)('#nav-mobile').html((<any>$)('#nav-main').html());
+(<any>$)('#nav-trigger spa').on('click', function() {
+if ((<any>$)('nav#nav-mobile ul').hasClass('expanded')) {
+(<any>$)('nav#nav-mobile ul.expanded').removeClass('expanded').slideUp(250);
+(<any>$)(this).removeClass('open');
+ } else {
+(<any>$)('nav#nav-mobile ul').addClass('expanded').slideDown(250);
+(<any>$)(this).addClass('open');
+}
+});
+
+(<any>$)('#nav-mobile').html((<any>$)('#nav-main').html());
+(<any>$)('#nav-mobile ul a').on('click', function() {
+if ((<any>$)('nav#nav-mobile ul').hasClass('expanded')) {
+(<any>$)('nav#nav-mobile ul.expanded').removeClass('expanded').slideUp(250);
+(<any>$)('#nav-trigger span').removeClass('open');
+    }
+    });
+  });
+}
+
+
+  // getActiveTab(tabname: string) {
+  // this.activetab = tabname;
+  // console.log(tabname);
+  // }
+  // logout() {
+  //  this.auth.logout();
+  // }
 }
 
