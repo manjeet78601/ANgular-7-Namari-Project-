@@ -52,7 +52,7 @@ export const configuration = {
         title: 'We have the right package for you',
         description: '',
         plans: [
-          { title: 'PERSONAL', subtitle: 'The standard version', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', price: '19', currency: '₹', 
+          { title: 'PERSONAL', subtitle: 'The standard version', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', price: '19', currency: '₹',
             downloads: '5 Downloads', extensions: '2 Extensions',tutorials: 'Tutorials', support: 'Forum Support', updates: '1year Free updates',
           buttontext: 'Buy Now', buttonlink: '#', featured: true
           },
@@ -61,7 +61,7 @@ export const configuration = {
           buttontext: 'Buy Now', buttonlink: '#', featured: true
           },
 
-          { link: 'https://www.facebook.com',  title: 'BUSINESS', subtitle: 'For the whole team', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', price: '49', currency: '₹',  
+          { link: 'https://www.facebook.com',  title: 'BUSINESS', subtitle: 'For the whole team', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', price: '49', currency: '₹',
              downloads: 'unlimited Downloads', extensions:'Extension', tutorials: 'Tutorials',support: 'Forum Support', updates: '3 year Free updates',
           buttontext: 'Buy Now', buttonlink: '#', featured: true
           },

@@ -28,6 +28,7 @@
               "node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": [
+              "node_modules/wowjs/dist/wow.js",
               "src/assets/js/jquery.1.8.3.min.js",
                 "src/assets/js/wow.min.js",
                 "src/assets/js/featherlight.min.js",
