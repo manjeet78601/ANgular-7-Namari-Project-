@@ -14,6 +14,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 12, FirstName: 'Sanjeet', LastName: 'Singh', email: 'sanjeetpathania13@gmail.com', password: 'welcome'}
     ];
     return {users};
+
   }
   getToken(user) {
     return 'this is a token';
@@ -50,7 +51,7 @@ return reqInfo.utils.createResponse$(() => {
   options.url = reqInfo.url;
   return options;
  });
-} else if (reqInfo.id === 'signup') {
+    }  else if (reqInfo.id === 'signup') {
     reqInfo.id = null;
     console.log('from signup');
   }

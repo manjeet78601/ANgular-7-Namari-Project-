@@ -32,7 +32,8 @@ const routes: Routes = [
   { path: 'Article/:id', component: ArticleComponent },
   { path: 'Pricing', component: PricingComponent },
   {path: '404', component: NotfoundComponent},
-  {path: '**', redirectTo: '/404'},
+  {path: '**', redirectTo: '/404'}
+
 ];
 
 @NgModule({

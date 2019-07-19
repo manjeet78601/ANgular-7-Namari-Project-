@@ -32,7 +32,7 @@ export class PagerService {
        endPage = currentPage + 4;
      }
    }
-   //calculate start and end index Item 
+   //calculate start and end index Item
    let startIndex = (currentPage - 1) * pageSize;
    let endIndex = Math.min((startIndex + pageSize - 1), (totalItems - 1));
 

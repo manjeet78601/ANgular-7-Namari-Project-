@@ -37,6 +37,19 @@ if ((<any>$)('nav#nav-mobile ul').hasClass('expanded')) {
 (<any>$)('#nav-trigger span').removeClass('open');
     }
     });
+
+    /* Sticky Navigation */
+ if (!!<any>$.prototype.stickyNavbar) {
+ (<any>$)('#header').stickyNavbar();
+   }
+
+ (<any>$)('#content').waypoint(function (direction) {
+if (direction === 'down') {
+(<any>$)('#header').addClass('nav-solid fadeInDown');
+ } else {
+(<any>$)('#header').removeClass('nav-solid fadeInDown');
+}
+});
   });
 }
 
