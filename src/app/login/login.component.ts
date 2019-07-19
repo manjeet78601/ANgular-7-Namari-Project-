@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
 import { AuthenticationService } from '../authentication.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, ActivatedRouteSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,6 +13,7 @@ loginForm: FormGroup;
 returnUrl: string;
   constructor(private fb: FormBuilder, private auth: AuthenticationService,
     private route: ActivatedRoute,
+    // private route: ActivatedRouteSnapshot,
     private router: Router) { }
 
   ngOnInit() {

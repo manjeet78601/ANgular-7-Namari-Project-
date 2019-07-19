@@ -10,11 +10,11 @@ import * as $ from 'jquery';
 export class NavigationComponent implements OnInit {
   activetab: string;
   isloggedIn: boolean;
-  constructor(private location: Location,  private auth: AuthenticationService ) { }
+  constructor(private location: Location,  private auth: AuthenticationService) { }
 
   ngOnInit() {
-    // this.activetab = this.location.path();
-    // console.log(`from ${this.activetab}`);
+    this.activetab = this.location.path();
+    console.log(`from ${this.activetab}`);
 
     (<any>$)(document).ready(function () {
 
@@ -54,12 +54,12 @@ if (direction === 'down') {
 }
 
 
-  // getActiveTab(tabname: string) {
-  // this.activetab = tabname;
-  // console.log(tabname);
-  // }
-  // logout() {
-  //  this.auth.logout();
-  // }
+  getActiveTab(tabname: string) {
+  this.activetab = tabname;
+  console.log(tabname);
+  }
+//   logout() {
+// this.auth.logout();
+//   }
 }
 
