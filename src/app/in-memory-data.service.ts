@@ -31,17 +31,17 @@ export class InMemoryDataService implements InMemoryDbService {
     return {users,posts};
 
   }
-  getToken(user) {
-    return 'this is a token';
-  }
+  // getToken(user) {
+  //   return 'this is a token';
+  // }
 //posts api declare create a new function//
- getToken(user){
+ getToken(user) {
    return 'this is a token ';
  }
 
  get(reqInfo: RequestInfo) {
-if (reqInfo.collectionName === 'posts'){
-   return this.getArticles(reqInfo:RequestInfo);
+if (reqInfo.collectionName === 'posts') {
+  //  return this.getArticles(reqInfo:Request);
 }
 return undefined;
 
